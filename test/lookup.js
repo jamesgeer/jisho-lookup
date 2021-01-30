@@ -20,7 +20,5 @@ document.addEventListener('mouseup', event => {
         iframe.style.left = left + 'px';
 
         document.body.appendChild(iframe)
-
-        //window.open("https://jisho.org/search/" + exactText, "", "width=800,height=800");
     }
 })
