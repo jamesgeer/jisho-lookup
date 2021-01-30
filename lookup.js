@@ -1,18 +1,16 @@
 browser.contextMenus.create({
     id: "lookup-jisho",
     title: "Jisho Lookup",
-    contexts: ["link"],
+    contexts: ["selection"],
 });
+
+
 browser.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "lookup-jisho") {
 
-        // Examples: text and HTML to be copied.
-        const text = "This is text: " + info.linkUrl;
-        // Always HTML-escape external input to avoid XSS.
-        const safeUrl = escapeHTML(info.linkUrl);
-        const html = `This is HTML: <a href="${safeUrl}">${safeUrl}</a>`;
+        const selectedText = info.selectionText;
 
-        console.log(info);
+        window.open("https://jisho.org/search/" + selectedText, "", "width=200,height=100");
 
     }
 });
