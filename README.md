@@ -1,4 +1,4 @@
-# Firefox Jisho Lookup Extension
+# Jisho Lookup (Browser Extension)
 
 ### My lightweight extension to quickly look up Japanese words or sentances using the [Jisho.org](https://jisho.org/) website.
 <br>
